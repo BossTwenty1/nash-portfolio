@@ -1,0 +1,39 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+.vercel/
+artifacts/
+
+# Original assets and local working evidence are not publication inputs.
+/GEARS IMAGES/
+# Historical unused fonts stay local pending inventory/archive approval.
+/public/fonts/Geist.woff2
+/public/fonts/GeistPixel-Square.woff2
+/backups/
+/backup/
+*.bak
+*.snapshot
+*.log
+/.agents/
+/.impeccable/
+/.codex/
+/CODEX_START_HERE.md
+/PRODUCT.md
+/DESIGN.md
+/VERIFICATION.md
+/docs/DEPLOYMENT_PREPARATION.md
+/docs/GITHUB_PUBLICATION_FILES.txt
+/*_REPORT.md
+/*_AUDIT.md
+
+# Local credentials and editor state.
+*.pem
+*.key
+*.p12
+*.pfx
+/.idea/
+/.vscode/
