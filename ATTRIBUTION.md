@@ -1,8 +1,4 @@
-# Design reference & attribution
-
-Current visual inspiration: [switberto.com](https://www.switberto.com/). Phase 1 is an independently authored React/CSS implementation informed by public screenshots and computed design measurements. No proprietary code, personal text, portraits, project images or branding from that reference is redistributed.
-
-Historical visual/design-system inspiration: [Bryl Lim — bryllim.com](https://bryllim.com/), superseded by the owner's approved Phase 1 brief.
+# Licenses & asset provenance
 
 MIT-licensed design language: [bryllim/bryl-minimal-design](https://github.com/bryllim/bryl-minimal-design) — Copyright (c) 2026 Bryl Lim. The complete license is preserved for publication at [docs/licenses/bryl-minimal-design.LICENSE](docs/licenses/bryl-minimal-design.LICENSE). The original local skill remains under `.agents/skills/bryl-minimal-design/` and is excluded from the proposed repository.
 

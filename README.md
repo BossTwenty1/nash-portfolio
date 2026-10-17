@@ -1,6 +1,6 @@
 # Nash — Full-Stack Developer Portfolio
 
-An independently implemented Next.js/React portfolio inspired by [switberto.com](https://www.switberto.com/). The approved Phase 1 redesign replaces the previous Bryl-inspired direction with warm terminal surfaces, Geist Mono, an immersive centered hero and floating navigation. Light, dark and system themes remain available.
+A Next.js/React portfolio for Nash A. Mapula, featuring warm terminal surfaces, Geist Mono typography, a centered hero and floating navigation. Light, dark and system themes are available.
 
 The primary public identity is **Full-Stack Developer**. The homepage presents About, core skills and project work; factual BSIT background appears under Education on the Experience page.
 
@@ -30,7 +30,7 @@ The primary public identity is **Full-Stack Developer**. The homepage presents A
 
 ## Principles
 
-- Public identity and content belong to Nash. No Switberto or Bryl personal assets, branding or proprietary implementation is copied.
+- Public identity and portfolio content belong to Nash.
 - Recommendations remain blank. Certificate/award drafts contain only owner-supplied details and remain unpublished until the original image and viewing link are supplied. The owner-supplied social profiles and professional email appear in Let's connect. Gear uses original supplied images with concise descriptions; the homepage previews three items.
 - SVG project graphics are generic concept artwork, **not screenshots**.
 - Work-in-progress projects are not described as fully deployed.
@@ -77,9 +77,9 @@ npm run build
 
 Check 360px, 390px, 768px, 1024px, and 1440px widths, keyboard navigation, mobile menu focus, reduced-motion preference, and contrast in both themes.
 
-## Reference and acknowledgment
+## Licenses and attribution
 
-Switberto is the current visual reference; implementation is original. The earlier **bryl-minimal-design** MIT license is retained as historical attribution. See `ATTRIBUTION.md` for design and font provenance.
+Third-party code and font licenses are preserved with their respective assets. See `ATTRIBUTION.md` for license notices and asset provenance.
 
 Dependencies are locked in `package-lock.json`. Typecheck, lint, parser checks and production build have been verified locally. Full interactive browser verification remains a release check; the remaining tooling advisories are described below.
 
