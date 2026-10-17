@@ -296,7 +296,7 @@ export default function ShapeGrid({
   const engineRef = useRef(null);
   const settingsRef = useRef(null);
 
-  settingsRef.current = {
+  const settings = {
     shape: SHAPES.includes(shape) ? shape : 'square',
     cellSize: Math.max(8, cellSize),
     lineWidth: Math.max(0.25, lineWidth),
@@ -319,6 +319,10 @@ export default function ShapeGrid({
     paused,
     dpr
   };
+
+  useEffect(() => {
+    settingsRef.current = settings;
+  });
 
   useEffect(() => {
     const container = containerRef.current;

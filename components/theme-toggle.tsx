@@ -31,18 +31,18 @@ function subscribe(onChange: () => void) {
   };
 }
 
+function setTheme(next: Theme) {
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem("portfolio-theme", next);
+  } catch {
+    // Theme selection still works when browser storage is unavailable.
+  }
+  window.dispatchEvent(new Event("portfolio-theme-change"));
+}
+
 export function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, getTheme, () => "system");
-
-  function setTheme(next: Theme) {
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("portfolio-theme", next);
-    } catch {
-      // Theme selection still works when browser storage is unavailable.
-    }
-    window.dispatchEvent(new Event("portfolio-theme-change"));
-  }
 
   return (
     <div className="theme-control" role="group" aria-label="Theme">

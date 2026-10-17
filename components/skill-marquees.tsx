@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import {
   Atom, Braces, Code2, Database, FileCode2, GitBranch, Github,
   KeyRound, MapPinned, Navigation, Network,
@@ -27,22 +27,22 @@ const skillIcons = {
   "GPS workflows": Navigation,
 };
 
+function subscribeToVisibility(onChange: () => void) {
+  document.addEventListener("visibilitychange", onChange);
+  return () => document.removeEventListener("visibilitychange", onChange);
+}
+
 export function SkillMarquees() {
   const panel = useRef<HTMLDivElement>(null);
-  const [enhanced, setEnhanced] = useState(false);
+  const enhanced = useSyncExternalStore(subscribeToVisibility, () => true, () => false);
   const [visible, setVisible] = useState(false);
-  const [tabVisible, setTabVisible] = useState(true);
+  const tabVisible = useSyncExternalStore(subscribeToVisibility, () => !document.hidden, () => true);
 
   useEffect(() => {
-    setEnhanced(true);
     const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting));
     if (panel.current) observer.observe(panel.current);
-    const syncVisibility = () => setTabVisible(!document.hidden);
-    syncVisibility();
-    document.addEventListener("visibilitychange", syncVisibility);
     return () => {
       observer.disconnect();
-      document.removeEventListener("visibilitychange", syncVisibility);
     };
   }, []);
 

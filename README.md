@@ -198,13 +198,19 @@ Without JavaScript or a2D canvas, the warm base background remains readable.
 
 The application remains a full Next.js App Router build, with six-hour GitHub
 calendar caching/revalidation and runtime image optimization. No static export,
-hosting connection, Git initialization or deployment has been performed.
+hosting connection or deployment has been performed.
 
 Use `npm ci` with the committed lockfile for reproducible installs. A narrowly
 scoped npm override updates Next's PostCSS dependency to 8.5.30 while retaining
-Next 15.5.28. Review/remove that override when a future compatible Next release
+Next 16.4.2. Review/remove that override when a future compatible Next release
 includes a fixed PostCSS version. The braces 3.0.3 advisory remains in development
 lint tooling and needs a separate risk/compatibility review before deployment.
+
+Next's development and build scripts explicitly retain Webpack. The lint setup
+uses Next 16's native flat configuration. ESLint 9.39.5 is temporarily retained:
+the transitive import, React and accessibility plugins still exclude ESLint 10
+from their published peer ranges. ESLint 9 is EOL; revisit ESLint 10 when this
+dependency tree can pass strict peer validation.
 
 Gear provenance sidecars are preserved under ignored
 `artifacts/asset-provenance/gear/`, rather than `public/`. Shipping images and
