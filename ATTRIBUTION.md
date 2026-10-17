@@ -6,8 +6,8 @@ Self-hosted Geist, Geist Mono, and Geist Pixel Square fonts are from [Vercel's o
 
 The current interface uses the existing self-hosted Geist Mono font. The unused Geist and Geist Pixel Square files are preserved locally and excluded from the proposed publication inventory; the full OFL remains with the published Geist Mono font. Project SVGs are independently authored concept illustrations, explicitly labeled as such; they are not product screenshots.
 
-Profile portrait: supplied by the owner as `Confident Monochrome Stage Portrait.png`
-on 17 October 2026, copied unchanged to `public/nash-mapula-portrait.png`.
+Profile portrait: supplied by the owner as `public/nash-mapula-newportrait.png`
+on 18 October 2026 and used unchanged.
 The display crop is controlled by CSS; no ownership or authorship beyond this
 supplied provenance is asserted.
 

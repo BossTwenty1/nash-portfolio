@@ -5,7 +5,7 @@
 export const profile = {
   name: "Nash A. Mapula",
   heroName: "NASH MAPULA",
-  portrait: "/nash-mapula-portrait.png",
+  portrait: "/nash-mapula-newportrait.png",
   role: "Full-Stack Developer",
   education: "Fourth-year BS Information Technology student",
   intro:
