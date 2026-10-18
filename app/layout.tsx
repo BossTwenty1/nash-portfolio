@@ -4,6 +4,7 @@ import { PortfolioBackground } from "@/components/portfolio-background";
 import { profile } from "@/content/portfolio";
 import { createPageMetadata } from "@/lib/metadata";
 import "./globals.css";
+import "./projects.css";
 
 export const metadata: Metadata = {
   ...createPageMetadata(

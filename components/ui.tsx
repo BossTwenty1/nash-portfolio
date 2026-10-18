@@ -1,7 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
-import type { PortfolioProject } from "@/content/portfolio";
+import { ArrowLeft } from "lucide-react";
 
 type SectionHeadingProps = {
   title: string;
@@ -59,45 +57,6 @@ export function Tags({ items }: { items: string[] }) {
         </span>
       ))}
     </div>
-  );
-}
-
-export function ProjectCard({ project }: { project: PortfolioProject }) {
-  return (
-    <article className="project-card">
-      <div className="project-image-wrap">
-        <Image
-          className="project-image"
-          src={project.illustration}
-          alt={`Abstract illustration for ${project.title}; not a product screenshot`}
-          width={760}
-          height={350}
-          loading="eager"
-        />
-        <span className="project-image-caption">Concept illustration</span>
-      </div>
-      <div className="project-body">
-        <span className="eyebrow">{project.subtitle}</span>
-        <h3>{project.title}</h3>
-        <span className="project-status">
-          <span aria-hidden="true" />
-          {project.status}
-        </span>
-        <p>{project.description}</p>
-        <Tags items={project.technologies} />
-        {project.repo && (
-          <a
-            className="small-arrow-link"
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`View ${project.title} source repository`}
-          >
-            View source <ArrowUpRight size={14} aria-hidden="true" />
-          </a>
-        )}
-      </div>
-    </article>
   );
 }
 

@@ -60,7 +60,18 @@ export type PortfolioProject = {
   status: string;
   technologies: string[];
   repo: string | null;
+  liveDemo?: string;
   illustration: string;
+  imageAlt?: string;
+  imageCaption?: string;
+  summary: string;
+  caseStudy: {
+    problem: string;
+    goal: string;
+    solution: string;
+    features: string[];
+    development: string;
+  };
 };
 
 export const projects: PortfolioProject[] = [
@@ -76,6 +87,14 @@ export const projects: PortfolioProject[] = [
     technologies: ["Web Development", "GIS / Mapping", "GPS"],
     repo: "https://github.com/BossTwenty1/Github-Final",
     illustration: "/gravenav-illustration.svg",
+    summary: "A GPS-enabled gravesite locator and cemetery management capstone, with mapping and spatial-data validation in progress.",
+    caseStudy: {
+      problem: "The capstone addresses locating gravesites and managing cemetery information through a web application.",
+      goal: "Support gravesite location with GPS-enabled mapping and validated cemetery spatial data.",
+      solution: "An application in development that brings cemetery mapping workflows and gravesite management together.",
+      features: ["Gravesite location workflows", "Cemetery mapping", "Cemetery spatial-data validation", "Cemetery management"],
+      development: "Current work includes GIS data preparation, mapping workflows, and development planning with the capstone team. Final functionality and deployed availability remain unverified.",
+    },
   },
   {
     slug: "safe",
@@ -95,6 +114,41 @@ export const projects: PortfolioProject[] = [
     ],
     repo: "https://github.com/BossTwenty1/iot-water-filtration-system",
     illustration: "/safe-illustration.svg",
+    summary: "An IoT water filtration research dashboard for monitoring records, authentication, and role-based management.",
+    caseStudy: {
+      problem: "The water filtration research system needs interfaces for monitoring records and managing access.",
+      goal: "Connect the dashboard interface to backend services while supporting authentication and role-based user management.",
+      solution: "A web dashboard with API-backed pages and access-management interfaces. Integration and end-to-end verification are ongoing.",
+      features: ["Monitoring record interfaces", "Authentication integration", "Backend API integration", "Role-based user management"],
+      development: "Contributions cover frontend redesign, authentication, backend API integration, and user management. Live hardware and database verification remain separate tasks; changes are subject to end-to-end verification.",
+    },
+  },
+  {
+    slug: "tilematch",
+    title: "TILEMATCH",
+    subtitle: "Full-Stack Web Application",
+    description:
+      "An academic e-commerce platform for browsing tile products, managing shopping carts, placing simulated orders, tracking orders, and managing products, inventory, and sales through an administrator dashboard.",
+    contribution:
+      "Independently developed the full-stack website for our E-Commerce subject, using React, Vite, and Tailwind CSS for the frontend, Node.js and Express.js for the backend, and MySQL for the database. Deployment uses Vercel, Render, and Aiven.",
+    status: "Academic project · Simulated orders",
+    technologies: [
+      "React", "Vite", "Tailwind CSS", "Node.js", "Express.js",
+      "MySQL", "Vercel", "Render", "Aiven",
+    ],
+    repo: "https://github.com/BossTwenty1/TILEMATCH",
+    liveDemo: "https://tilematch-omega.vercel.app/",
+    illustration: "/images/projects/tilematch-homepage.png",
+    imageAlt: "TILEMATCH storefront homepage with tile search, navigation, and a luxury tile collection hero",
+    imageCaption: "TILEMATCH homepage screenshot",
+    summary: "An academic tile-commerce platform with product browsing, shopping carts, simulated orders, and administrator tools.",
+    caseStudy: {
+      problem: "The E-Commerce subject project brings tile shopping and store administration into a full-stack academic website.",
+      goal: "Support the shopping journey from product browsing through simulated ordering and tracking, alongside product, inventory, and sales management.",
+      solution: "TILEMATCH combines a React storefront, a Node.js and Express.js backend, and a MySQL database. Orders are simulated for academic use.",
+      features: ["Tile product browsing", "Shopping cart management", "Simulated order placement", "Order tracking", "Administrator product and inventory management", "Administrator sales management"],
+      development: "Independently developed for the E-Commerce subject. The frontend uses React, Vite, and Tailwind CSS; the backend uses Node.js and Express.js with MySQL. Deployment uses Vercel, Render, and Aiven.",
+    },
   },
 ];
 

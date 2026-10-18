@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowUpRight, Facebook, Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 import {
-  profile, projects, experience, stack,
+  profile, experience, stack,
   gear, featuredCertificates,
 } from "@/content/portfolio";
 import { Hero } from "@/components/hero";
@@ -12,7 +12,8 @@ import { GearCard } from "@/components/gear-card";
 import { CertificatePreview } from "@/components/certificate-preview";
 import { ExperienceHighlights } from "@/components/experience-highlights";
 import { GithubActivity } from "@/components/github-activity";
-import { ProjectCard, SectionHeading, Tags } from "@/components/ui";
+import { SectionHeading, Tags } from "@/components/ui";
+import { SelectedProjects } from "@/components/selected-projects";
 
 export const revalidate = 21600;
 
@@ -62,17 +63,7 @@ export default function HomePage() {
         <AboutSection />
       </HomeSection>
 
-      <HomeSection
-        id="projects"
-        title="Featured Projects"
-        description="Two ongoing academic and collaborative projects, with their current development status."
-        href="/projects"
-        linkText="View All Projects"
-      >
-        <div className="project-list">
-          {projects.map((project) => <ProjectCard key={project.slug} project={project} />)}
-        </div>
-      </HomeSection>
+      <SelectedProjects />
 
       <HomeSection
         id="experience"
