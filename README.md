@@ -33,6 +33,8 @@ The primary public identity is **Full-Stack Developer**. The homepage presents A
 - Public identity and portfolio content belong to Nash.
 - Recommendations remain blank. Certificate/award drafts contain only owner-supplied details and remain unpublished until the original image and viewing link are supplied. The owner-supplied social profiles and professional email appear in Let's connect. Gear uses original supplied images with concise descriptions; the homepage previews three items.
 - SVG project graphics are generic concept artwork, **not screenshots**.
+- S.A.F.E uses the owner's supplied dashboard screenshot at `public/images/projects/safe-dashboard.png` across its project previews and case study.
+- GraveNav uses the owner's supplied homepage screenshot at `public/images/projects/gravenav-homepage.png` across its project previews and case study.
 - Work-in-progress projects are not described as fully deployed.
 - Third-party logos, copy, photography, and the actual proprietary website code were not copied.
 - Search indexing remains disabled until the owner explicitly approves launch. Set canonical URLs and a sitemap only after choosing the actual production origin.

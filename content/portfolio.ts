@@ -86,7 +86,9 @@ export const projects: PortfolioProject[] = [
     status: "In development",
     technologies: ["Web Development", "GIS / Mapping", "GPS"],
     repo: "https://github.com/BossTwenty1/Github-Final",
-    illustration: "/gravenav-illustration.svg",
+    illustration: "/images/projects/gravenav-homepage.png",
+    imageAlt: "GraveNav homepage with gravesite search, memorial park map, and verified-coordinate guidance",
+    imageCaption: "GraveNav homepage screenshot",
     summary: "A GPS-enabled gravesite locator and cemetery management capstone, with mapping and spatial-data validation in progress.",
     caseStudy: {
       problem: "The capstone addresses locating gravesites and managing cemetery information through a web application.",
@@ -113,7 +115,9 @@ export const projects: PortfolioProject[] = [
       "Supabase",
     ],
     repo: "https://github.com/BossTwenty1/iot-water-filtration-system",
-    illustration: "/safe-illustration.svg",
+    illustration: "/images/projects/safe-dashboard.png",
+    imageAlt: "S.A.F.E water filtration dashboard with turbidity comparison, test-run records, process sequence, and recorded alerts",
+    imageCaption: "S.A.F.E dashboard screenshot",
     summary: "An IoT water filtration research dashboard for monitoring records, authentication, and role-based management.",
     caseStudy: {
       problem: "The water filtration research system needs interfaces for monitoring records and managing access.",

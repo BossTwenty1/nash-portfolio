@@ -32,3 +32,13 @@ Portfolio favicon: the owner supplied the cream N mark on a dark background with
 a warm border on 19 October 2026. app/icon.png, app/apple-icon.png and
 app/favicon.ico are resized copies of that image, with its original design and
 full square composition preserved. No generated or substitute logo is used.
+
+S.A.F.E project preview: the owner supplied the dashboard screenshot on
+19 October 2026. `public/images/projects/safe-dashboard.png` is an unchanged
+copy, used on the homepage, Projects page, and S.A.F.E case study. The screenshot
+does not establish live hardware verification or deployment status.
+
+GraveNav project preview: the owner supplied the homepage screenshot on
+19 October 2026. `public/images/projects/gravenav-homepage.png` is an unchanged
+copy, used on the homepage, Projects page, and GraveNav case study. Existing
+development and verification disclosures remain in place.
