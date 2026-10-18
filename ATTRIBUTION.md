@@ -28,18 +28,6 @@ typing, live reduced-motion handling, touch filtering and hidden-tab cleanup.
 The registry declares no additional dependencies. The unmodified fetched JSON
 and hashes are retained in the external ShapeGrid evidence directory.
 
-CardSwap: React Bits / David Haz, JS-CSS registry source fetched from
-https://reactbits.dev/r/CardSwap-JS-CSS.json on 18 October 2026 for the homepage's
-four-certificate preview. Installed in components/react-bits/CardSwap.jsx and
-CardSwap.css under the same upstream MIT + Commons Clause license in LICENSE.md.
-The exact fetched JSON is retained locally in ignored artifacts/react-bits/.
-The two registry dependencies are @hugeicons/react and @hugeicons/core-free-icons.
-Local compatibility changes move the settings ref update into a layout effect
-and add a scoped lint exception for the unused upstream image fallback.
-The portfolio wrapper supplies real certificate cards, theme tokens, responsive
-dimensions, focus pausing and static reduced-motion/no-script output. The owner
-subsequently configured a horizontal fan with automatic rotation and no controls.
-
 Portfolio favicon: the owner supplied the cream N mark on a dark background with
 a warm border on 19 October 2026. app/icon.png, app/apple-icon.png and
 app/favicon.ico are resized copies of that image, with its original design and

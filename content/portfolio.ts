@@ -444,10 +444,9 @@ export function isPublishedCertificate(item: Certificate): item is PublishedCert
 export const publishedCertificates = certificates.filter(isPublishedCertificate);
 
 export const featuredCertificates = [
-  "hackerrank-software-engineer-intern",
   "oneroadmap-full-stack",
-  "hackerrank-sql-intermediate",
   "heroes-innovation-handiong",
+  "hackerrank-frontend-react",
 ].map((id) => publishedCertificates.find((item) => item.id === id))
   .filter((item): item is PublishedCertificate => item !== undefined);
 

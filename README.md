@@ -53,11 +53,11 @@ the two existing CodeCred/award entries remain unchanged.
 
 The dedicated page uses CertificateGroups and CertificateCard, organized as
 HackerRank, OneRoadmap, CodeCred, and Awards & Achievements. The homepage selects
-only Software Engineer Intern, Full Stack Developer, SQL (Intermediate), and
-3rd Place — Handiong Track, in that order, using featuredCertificates.
+only Full Stack Developer, 3rd Place — Handiong Track, and Frontend Developer
+(React), in that order, using featuredCertificates. The award is the middle card.
 Maintain the provider order in certificateGroups alongside the structured entries.
 The full page displays three cards per row at 1024px and above, two on tablets,
-and one below 640px. This rule does not change the homepage CardSwap preview.
+and one below 640px. The homepage preview uses the same responsive column counts.
 An entry requires image src/alt and a viewing URL
 before publication. Intrinsic dimensions are optional metadata: the shared fill
 image reserves a4:3 stage and uses contain without guessing image dimensions.
@@ -75,28 +75,13 @@ Use the file's actual ID in a Drive thumbnail URL, with sz=w1600 for bounded ima
 delivery; keep its official verification URL in verify. Missing images keep entries
 unpublished. No iframe, modal or embedded viewer is used.
 
-The homepage preview uses React Bits CardSwap JS-CSS with custom Card children,
-420×300 cards and a 600px desktop stage. The owner's configured horizontal fan
-uses cardDistance=120, verticalDistance=12, depth=0, skewAmount=0, cardRadius=1,
-delay=4250, speed=1.4, bounce=0.55 and hoverSpread=0.19. The duplicate delay in
-the supplied example resolves to its final value, 4250ms. Titles/providers sit
-above complete, uncropped certificate images, with the original credential links.
-There are no arrow, counter or pause controls; rotation loops automatically and
-continues on hover. Keyboard arrows remain available on the stack. Rotation
-pauses while keyboard focus is inside, offscreen and in hidden tabs. Smaller
-screens use one visible 280×360 front card within a 420px stage so certificate
-text and links remain readable; the same four items continue rotating.
-Reduced-motion and no-script visitors receive a static four-card layout.
-The full collection remains behind View All Certificates & Awards.
-
-The requested shadcn command reached a new components.json setup prompt and was
-canceled; the registry's exact JSX/CSS was installed directly into the existing
-components/react-bits directory. Both listed Hugeicons dependencies are installed.
-A TypeScript declaration describes the JS component's used interface. The only
-upstream logic adjustment moves the settings-ref assignment into its layout
-effect for compatibility with React's refs lint rule; its animation is retained.
-The unused upstream image fallback has a scoped Next Image lint exception;
-portfolio cards continue using the existing Next Image component. See ATTRIBUTION.md.
+The homepage preview uses three ordinary CertificateCard components, with all
+content present in server HTML. Hovering or focusing a card lifts it 4px and
+zooms its certificate image by 2.5%, retaining the site's existing border glow.
+Reduced-motion preferences disable lift and zoom; links and full content remain
+available without JavaScript. View All Certificates & Awards opens the complete
+provider-grouped collection, including the Handiong Track award. CardSwap and
+its exclusive Hugeicons dependencies have been removed.
 
 ## LakbayAlbay hackathon experience
 
