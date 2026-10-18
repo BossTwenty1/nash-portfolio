@@ -39,3 +39,8 @@ and add a scoped lint exception for the unused upstream image fallback.
 The portfolio wrapper supplies real certificate cards, theme tokens, responsive
 dimensions, focus pausing and static reduced-motion/no-script output. The owner
 subsequently configured a horizontal fan with automatic rotation and no controls.
+
+Portfolio favicon: the owner supplied the cream N mark on a dark background with
+a warm border on 19 October 2026. app/icon.png, app/apple-icon.png and
+app/favicon.ico are resized copies of that image, with its original design and
+full square composition preserved. No generated or substitute logo is used.
