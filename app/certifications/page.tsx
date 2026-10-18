@@ -1,10 +1,10 @@
 import { createPageMetadata } from "@/lib/metadata";
 import { publishedCertificates } from "@/content/portfolio";
-import { CertificateCard } from "@/components/certificate-card";
+import { CertificateGroups } from "@/components/certificate-groups";
 import { EmptyState, PageIntro } from "@/components/ui";
 export const metadata = createPageMetadata(
   "Certifications & Awards",
-  "Nash A. Mapula's HTML Fundamentals certificate and Mind Goblins' third-place Handiong Track recognition, with supplied images and viewing links.",
+  "Nash A. Mapula's HackerRank, OneRoadmap and CodeCred certificates, and hackathon recognition, with original images and credential links.",
 );
 export default function CertificationsPage() {
   return (
@@ -14,11 +14,7 @@ export default function CertificationsPage() {
         description="Certificates and recognition, with original images and external verification links."
       />
       {publishedCertificates.length ? (
-        <div className="cert-list enter">
-          {publishedCertificates.map((item) => (
-            <CertificateCard key={item.id} item={item} headingLevel={2} />
-          ))}
-        </div>
+        <CertificateGroups />
       ) : (
         <EmptyState
           title="No certificates or awards published yet"

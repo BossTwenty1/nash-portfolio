@@ -1486,10 +1486,29 @@ svg {
   color: var(--muted);
   font-size: 10px;
 }
+.certificate-groups {
+  display: grid;
+  gap: 40px;
+}
+.certificate-group-title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
 .cert-list {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 1024px) {
+  .certificate-groups .cert-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 639px) {
+  .cert-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 .cert-item {
   display: flex;
@@ -1522,7 +1541,7 @@ svg {
   align-items: flex-start;
   padding: 20px;
 }
-.cert-item h2, .cert-item h3 {
+.cert-item h2, .cert-item h3, .cert-item h4 {
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
@@ -1537,6 +1556,75 @@ svg {
   gap: 6px;
   padding-top: 16px;
   margin-top: auto;
+}
+.certificate-swap {
+  height: 600px;
+  overflow: clip;
+}
+.certificate-swap .card-swap {
+  --swap-tile: var(--card) !important;
+  --swap-tile-edge: var(--border) !important;
+  --swap-tile-highlight: transparent !important;
+  --swap-shadow: none !important;
+  --swap-ink: var(--fg) !important;
+  --swap-shade: var(--bg) !important;
+}
+.certificate-swap .cert-item {
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+}
+.certificate-swap .certificate-image-link {
+  flex: 1;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+.certificate-swap .certificate-body {
+  flex: 0 0 auto;
+  padding: 0 14px;
+}
+.certificate-preview-heading {
+  flex: 0 0 auto;
+  padding: 10px 14px 0;
+}
+.certificate-swap .certificate-preview-heading h3 {
+  font-size: 15px;
+}
+.certificate-swap .certificate-preview-heading p {
+  margin-top: 4px;
+  font-size: 11px;
+}
+.certificate-swap .certificate-action {
+  min-height: 36px;
+  padding-top: 8px;
+}
+@media (max-width: 639px) {
+  .certificate-swap {
+    height: 420px;
+  }
+  .certificate-swap .certificate-preview-heading h3 {
+    font-size: 16px;
+  }
+  .certificate-swap .certificate-preview-heading p {
+    font-size: 13px;
+  }
+  .certificate-swap .certificate-action {
+    min-height: 48px;
+    font-size: 14px;
+  }
+}
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  .certificate-preview:not([data-animated]) {
+    min-height: 600px;
+  }
+  .certificate-preview-static {
+    display: none;
+  }
+}
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) and (max-width: 639px) {
+  .certificate-preview:not([data-animated]) {
+    min-height: 420px;
+  }
 }
 .not-found {
   padding-block: 96px;

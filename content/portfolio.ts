@@ -299,6 +299,7 @@ export type Certificate = {
   event?: string;
   team?: string;
   year?: string;
+  issuedOn?: string;
   verify?: string;
   image?: {
     src: string;
@@ -308,6 +309,102 @@ export type Certificate = {
   };
 };
 export const certificates: Certificate[] = [
+  {
+    id: "hackerrank-sql-intermediate",
+    kind: "certificate",
+    title: "SQL (Intermediate)",
+    issuer: "HackerRank",
+    issuedOn: "2026-10-18",
+    verify: "https://www.hackerrank.com/certificates/bb9e803e664b",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1cGMNpGk0H53ahMX6L0zwvWlFUahDbIvP&sz=w1600",
+      alt: "SQL (Intermediate) certificate awarded to Nash Alota Mapula by HackerRank",
+    },
+  },
+  {
+    id: "hackerrank-frontend-react",
+    kind: "certificate",
+    title: "Frontend Developer (React)",
+    issuer: "HackerRank",
+    issuedOn: "2026-10-18",
+    verify: "https://www.hackerrank.com/certificates/eccfd63a7413",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1Jxv1u9bP52YnC_fWV9X_m5rQ01YUTW6Z&sz=w1600",
+      alt: "Frontend Developer (React) certificate awarded to Nash Alota Mapula by HackerRank",
+    },
+  },
+  {
+    id: "hackerrank-rest-api-intermediate",
+    kind: "certificate",
+    title: "Rest API (Intermediate)",
+    issuer: "HackerRank",
+    issuedOn: "2026-10-18",
+    verify: "https://www.hackerrank.com/certificates/2070badd870b",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=17IfHOMmDnVxZtIGPtzfzpA78n5UELPt6&sz=w1600",
+      alt: "Rest API (Intermediate) certificate awarded to Nash Alota Mapula by HackerRank",
+    },
+  },
+  {
+    id: "hackerrank-software-engineer-intern",
+    kind: "certificate",
+    title: "Software Engineer Intern",
+    issuer: "HackerRank",
+    issuedOn: "2026-10-18",
+    verify: "https://www.hackerrank.com/certificates/0c82b42e60d5",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1lYNpbB2o1DoTzFEdwKWsPh_29uXs-8UK&sz=w1600",
+      alt: "Software Engineer Intern certificate awarded to Nash Alota Mapula by HackerRank",
+    },
+  },
+  {
+    id: "hackerrank-javascript-intermediate",
+    kind: "certificate",
+    title: "JavaScript (Intermediate)",
+    issuer: "HackerRank",
+    issuedOn: "2026-10-18",
+    verify: "https://www.hackerrank.com/certificates/34ddc4796b42",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1z4ZSdCJ06ScnOuU-srTOljXFnSBj8VuK&sz=w1600",
+      alt: "JavaScript (Intermediate) certificate awarded to Nash Alota Mapula by HackerRank",
+    },
+  },
+  {
+    id: "hackerrank-problem-solving-intermediate",
+    kind: "certificate",
+    title: "Problem Solving (Intermediate)",
+    issuer: "HackerRank",
+    issuedOn: "2026-10-18",
+    verify: "https://www.hackerrank.com/certificates/4546c9b715d4",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1ODLXqztqu-zShwPLEjr1s7MjUjF6Ng96&sz=w1600",
+      alt: "Problem Solving (Intermediate) certificate awarded to Nash Alota Mapula by HackerRank",
+    },
+  },
+  {
+    id: "oneroadmap-full-stack",
+    kind: "certificate",
+    title: "Full Stack Developer",
+    issuer: "OneRoadmap",
+    issuedOn: "2026-10-18",
+    verify: "https://www.oneroadmap.io/skills/fs/certificate/CERT-DD33F18B",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1CktNKtiXp_hhHyyyMdFyGsqR1OC5oc3t&sz=w1600",
+      alt: "Full Stack Developer certificate awarded to Nash Mapula by OneRoadmap",
+    },
+  },
+  {
+    id: "oneroadmap-tech-workplace",
+    kind: "certificate",
+    title: "Tech Workplace Competency",
+    issuer: "OneRoadmap",
+    issuedOn: "2026-10-18",
+    verify: "https://www.oneroadmap.io/skills/tech-workplace-competency/certificate/CERT-26954433",
+    image: {
+      src: "https://drive.google.com/thumbnail?id=1q_unF0GL1fBEFODNAJ1DYhEXNDCg2_0z&sz=w1600",
+      alt: "Tech Workplace Competency certificate awarded to Nash Mapula by OneRoadmap",
+    },
+  },
   {
     id: "codecred-html",
     kind: "certificate",
@@ -345,3 +442,20 @@ export function isPublishedCertificate(item: Certificate): item is PublishedCert
 }
 
 export const publishedCertificates = certificates.filter(isPublishedCertificate);
+
+export const featuredCertificates = [
+  "hackerrank-software-engineer-intern",
+  "oneroadmap-full-stack",
+  "hackerrank-sql-intermediate",
+  "heroes-innovation-handiong",
+].map((id) => publishedCertificates.find((item) => item.id === id))
+  .filter((item): item is PublishedCertificate => item !== undefined);
+
+export const certificateGroups = [
+  "HackerRank", "OneRoadmap", "CodeCred", "Awards & Achievements",
+].map((title) => ({
+  title,
+  items: publishedCertificates.filter((item) => item.kind === "award"
+    ? title === "Awards & Achievements"
+    : item.issuer === title),
+})).filter((group) => group.items.length > 0);

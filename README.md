@@ -16,7 +16,7 @@ The primary public identity is **Full-Stack Developer**. The homepage presents A
    ```
 
 4. Open `http://localhost:3000`.
-5. Maintain verified content in `content/portfolio.ts`. The profile photograph, contact details, 11-item Gear inventory and two credentials are supplied; recommendations and the final résumé remain pending.
+5. Maintain verified content in `content/portfolio.ts`. The profile photograph, contact details, 11-item Gear inventory and ten certificate/award entries are supplied; recommendations and the final résumé remain pending.
 
 ## Pages included
 
@@ -45,8 +45,20 @@ uses the owner-supplied Drive image directly and links to its CodeCred URL. The
 and Team Mind Goblins; its supplied Drive image opens the event gallery folder.
 No year or issuer is inferred beyond supplied fields.
 
-Both the homepage preview and dedicated page use CertificateCard and the same
-publishedCertificates filter. An entry requires image src/alt and a viewing URL
+Six HackerRank and two OneRoadmap certificates use the owner's converted PNGs
+from the shared Drive folder. All eight issue dates were verified as 18 October
+2026 against the official credentials. The complete Problem Solving image is
+used; its separate blank export is excluded. Original certificate artwork and
+the two existing CodeCred/award entries remain unchanged.
+
+The dedicated page uses CertificateGroups and CertificateCard, organized as
+HackerRank, OneRoadmap, CodeCred, and Awards & Achievements. The homepage selects
+only Software Engineer Intern, Full Stack Developer, SQL (Intermediate), and
+3rd Place — Handiong Track, in that order, using featuredCertificates.
+Maintain the provider order in certificateGroups alongside the structured entries.
+The full page displays three cards per row at 1024px and above, two on tablets,
+and one below 640px. This rule does not change the homepage CardSwap preview.
+An entry requires image src/alt and a viewing URL
 before publication. Intrinsic dimensions are optional metadata: the shared fill
 image reserves a4:3 stage and uses contain without guessing image dimensions.
 Record the actual image URL or public path, alt and external viewing URL. Drive images load directly
@@ -54,7 +66,37 @@ in the visitor's browser using unoptimized Next Image, without an iframe or
 server image proxy. The Drive file must remain publicly accessible. No placeholder
 image or guessed URL is used. Images fit a4:3 stage using contain and remain
 fully visible. The whole image and View Certificate/View Award link open the
-same URL in a new tab. No iframe, modal or embedded viewer is used.
+same official credential URL in a new tab (the award retains its event gallery).
+Certificate actions read View Credential; awards retain View Award. Optional
+issuedOn uses a verified ISO date (YYYY-MM-DD) and renders without timezone drift.
+For new images, use individual files from the owner's public Drive repository:
+https://drive.google.com/drive/folders/1SDpKxuFpX8c-rwm9NMqAufg5lDYNJndw
+Use the file's actual ID in a Drive thumbnail URL, with sz=w1600 for bounded image
+delivery; keep its official verification URL in verify. Missing images keep entries
+unpublished. No iframe, modal or embedded viewer is used.
+
+The homepage preview uses React Bits CardSwap JS-CSS with custom Card children,
+420×300 cards and a 600px desktop stage. The owner's configured horizontal fan
+uses cardDistance=120, verticalDistance=12, depth=0, skewAmount=0, cardRadius=1,
+delay=4250, speed=1.4, bounce=0.55 and hoverSpread=0.19. The duplicate delay in
+the supplied example resolves to its final value, 4250ms. Titles/providers sit
+above complete, uncropped certificate images, with the original credential links.
+There are no arrow, counter or pause controls; rotation loops automatically and
+continues on hover. Keyboard arrows remain available on the stack. Rotation
+pauses while keyboard focus is inside, offscreen and in hidden tabs. Smaller
+screens use one visible 280×360 front card within a 420px stage so certificate
+text and links remain readable; the same four items continue rotating.
+Reduced-motion and no-script visitors receive a static four-card layout.
+The full collection remains behind View All Certificates & Awards.
+
+The requested shadcn command reached a new components.json setup prompt and was
+canceled; the registry's exact JSX/CSS was installed directly into the existing
+components/react-bits directory. Both listed Hugeicons dependencies are installed.
+A TypeScript declaration describes the JS component's used interface. The only
+upstream logic adjustment moves the settings-ref assignment into its layout
+effect for compatibility with React's refs lint rule; its animation is retained.
+The unused upstream image fallback has a scoped Next Image lint exception;
+portfolio cards continue using the existing Next Image component. See ATTRIBUTION.md.
 
 ## LakbayAlbay hackathon experience
 

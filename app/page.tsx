@@ -3,13 +3,13 @@ import type { ReactNode } from "react";
 import { ArrowUpRight, Facebook, Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 import {
   profile, projects, experience, stack,
-  gear, publishedCertificates,
+  gear, featuredCertificates,
 } from "@/content/portfolio";
 import { Hero } from "@/components/hero";
 import { ScrollReveals } from "@/components/scroll-reveals";
 import { AboutSection } from "@/components/about-section";
 import { GearCard } from "@/components/gear-card";
-import { CertificateCard } from "@/components/certificate-card";
+import { CertificatePreview } from "@/components/certificate-preview";
 import { ExperienceHighlights } from "@/components/experience-highlights";
 import { GithubActivity } from "@/components/github-activity";
 import { ProjectCard, SectionHeading, Tags } from "@/components/ui";
@@ -131,12 +131,8 @@ export default function HomePage() {
       </HomeSection>
 
       <HomeSection id="certifications" title="Certifications & Awards" href="/certifications" linkText="View All Certificates & Awards">
-        {publishedCertificates.length ? (
-          <div className="cert-list">
-            {publishedCertificates.slice(0, 3).map((item) => (
-              <CertificateCard key={item.id} item={item} />
-            ))}
-          </div>
+        {featuredCertificates.length ? (
+          <CertificatePreview items={featuredCertificates} />
         ) : (
           <div className="collection-preview">
             <h3>No certificates or awards published yet</h3>
