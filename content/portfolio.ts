@@ -17,7 +17,7 @@ export const profile = {
   facebook: "https://www.facebook.com/nash.mapula/",
   linkedin: "https://www.linkedin.com/in/nash-mapula-a54034444/",
   github: "https://github.com/BossTwenty1",
-  resume: null as string | null, // TODO: Add /resume.pdf when your resume is ready.
+  resume: "/resume.pdf",
 };
 
 export const about = {
@@ -209,13 +209,20 @@ export const experience: Experience[] = [
 export const stack = [
   {
     category: "Languages",
-    items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"],
+    items: ["Python", "JavaScript", "TypeScript", "Java", "C++", "PHP", "HTML", "CSS"],
   },
   { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS"] },
-  { category: "Backend & Data", items: ["SQL", "Supabase", "REST APIs"] },
+  {
+    category: "Backend & Data",
+    items: ["SQL", "Supabase", "PostgreSQL", "REST APIs", "Authentication", "API integration"],
+  },
+  { category: "Mapping & GIS", items: ["Leaflet", "React Leaflet", "QGIS"] },
   {
     category: "Workflow & Tools",
-    items: ["Git", "GitHub", "VS Code", "Codex"],
+    items: [
+      "Git", "GitHub", "VS Code", "Codex", "Google Antigravity",
+      "MySQL Workbench", "Vercel", "Render",
+    ],
   },
 ];
 

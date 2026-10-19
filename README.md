@@ -16,7 +16,7 @@ The primary public identity is **Full-Stack Developer**. The homepage presents A
    ```
 
 4. Open `http://localhost:3000`.
-5. Maintain verified content in `content/portfolio.ts`. The profile photograph, contact details, 11-item Gear inventory and ten certificate/award entries are supplied; recommendations and the final résumé remain pending.
+5. Maintain verified content in `content/portfolio.ts`. The profile photograph, contact details, résumé, 11-item Gear inventory and ten certificate/award entries are supplied; recommendations remain pending.
 
 ## Pages included
 
@@ -38,6 +38,14 @@ The primary public identity is **Full-Stack Developer**. The homepage presents A
 - Work-in-progress projects are not described as fully deployed.
 - Third-party logos, copy, photography, and the actual proprietary website code were not copied.
 - Search indexing remains disabled until the owner explicitly approves launch. Set canonical URLs and a sitemap only after choosing the actual production origin.
+
+## Résumé and technical stack
+
+The homepage Download CV action downloads the owner's supplied PDF at
+`public/resume.pdf`, configured through `profile.resume`. The PDF is preserved
+unchanged. Replace this file when the owner supplies a newer résumé.
+The shared `stack` data powers the homepage Technical Stack section and `/stack`;
+its entries include the technical skills supplied in the résumé on 19 October 2026.
 
 ## Certifications & Awards
 
