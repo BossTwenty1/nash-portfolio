@@ -43,7 +43,8 @@ GraveNav project preview: the owner supplied the homepage screenshot on
 copy, used on the homepage, Projects page, and GraveNav case study. Existing
 development and verification disclosures remain in place.
 
-Résumé: the owner supplied `Nash A. Mapula - OJT Resume.pdf` on 19 October 2026
+Résumé: the owner supplied `Nash A. Mapula - Resume.pdf` on 19 October 2026
 and authorized its publication. `public/resume.pdf` is an unchanged copy served
 by the homepage Download CV action. Its Technical Skills section supplies the
-additional entries in the portfolio's shared technical stack.
+additional entries in the portfolio's shared technical stack. This version
+replaces the initial OJT-named PDF with the owner's revised spacing.
