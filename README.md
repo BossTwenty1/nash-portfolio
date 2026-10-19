@@ -44,8 +44,11 @@ The primary public identity is **Full-Stack Developer**. The homepage presents A
 The homepage Download CV action downloads the owner's supplied PDF at
 `public/resume.pdf`, configured through `profile.resume`. The PDF is preserved
 unchanged. Replace this file when the owner supplies a newer résumé.
-The shared `stack` data powers the homepage Technical Stack section and `/stack`;
-its entries include the technical skills supplied in the résumé on 19 October 2026.
+The complete `stack` data powers `/stack`, including the technical skills supplied
+in the résumé on 19 October 2026. The homepage uses `featuredStack`: four groups
+of three selected technologies. Languages and Frontend occupy the first row;
+Backend & Data and Workflow & Tools occupy the second at tablet/desktop widths.
+Mobile stacks the groups vertically. View Full Tech Stack opens the complete list.
 
 ## Certifications & Awards
 

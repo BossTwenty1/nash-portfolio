@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowUpRight, Facebook, Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 import {
-  profile, experience, stack,
+  profile, experience, featuredStack,
   gear, featuredCertificates,
 } from "@/content/portfolio";
 import { Hero } from "@/components/hero";
@@ -100,13 +100,13 @@ export default function HomePage() {
 
       <HomeSection
         id="stack"
-        title="Technical Stack"
-        description="Languages, frameworks, and tools used in coursework and project development."
+        title="Featured Stack"
+        description="Selected technologies I use across web projects."
         href="/stack"
-        linkText="Explore Technical Stack"
+        linkText="View Full Tech Stack"
       >
         <div className="home-stack">
-          {stack.map((group) => (
+          {featuredStack.map((group) => (
             <section className="home-stack-group" key={group.category} aria-label={group.category}>
               <h3>{group.category}</h3>
               <Tags items={group.items} />

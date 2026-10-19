@@ -226,6 +226,13 @@ export const stack = [
   },
 ];
 
+export const featuredStack = [
+  { category: "Languages", items: ["JavaScript", "TypeScript", "Python"] },
+  { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS"] },
+  { category: "Backend & Data", items: ["SQL", "Supabase", "REST APIs"] },
+  { category: "Workflow & Tools", items: ["Git", "GitHub", "Vercel"] },
+];
+
 // Do not fabricate equipment, qualifications, or testimonials.
 export type GearItem = {
   id: string;
