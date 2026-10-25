@@ -15,7 +15,8 @@ import { GithubActivity } from "@/components/github-activity";
 import { SectionHeading, Tags } from "@/components/ui";
 import { SelectedProjects } from "@/components/selected-projects";
 
-export const revalidate = 21600;
+// Keep the homepage in step with the GitHub data cache's five-minute refresh.
+export const revalidate = 300;
 
 const contactLinks = [
   { label: "Instagram", href: profile.instagram, Icon: Instagram },

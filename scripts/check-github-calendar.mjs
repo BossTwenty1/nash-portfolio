@@ -34,7 +34,8 @@ assert.throws(() => parseGithubCalendar(html.replace('data-date="2025-10-19"', '
 assert.throws(() => parseGithubCalendar(html.replace('data-level="4"', 'data-level="9"')));
 assert.throws(() => parseGithubCalendar(html.replace('data-level="4"', 'data-level="0"')));
 assert.throws(() => parseGithubCalendar(html.replace("1 contribution on", "Unknown activity on")));
-assert.throws(() => parseGithubCalendar(html.replace("1 contributions in", "2 contributions in")));
+// A headline updated separately from the daily cells must not hide valid data.
+assert.equal(parseGithubCalendar(html.replace("1 contributions in", "2 contributions in")).total, 1);
 assert.throws(() => parseGithubCalendar(fixture("2025-10-18", 30)));
 assert.throws(() => parseGithubCalendar("<script>unavailable</script>"));
 assert.throws(() => parseGithubCalendar(" ".repeat(2000001)));

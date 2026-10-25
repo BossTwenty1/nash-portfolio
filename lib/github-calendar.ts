@@ -58,10 +58,10 @@ export function parseGithubCalendar(html: string): ContributionCalendarData {
     }
   }
 
-  const totalText = html.match(/<h2\b[^>]*id="js-contribution-activity-description"[^>]*>\s*([\d,]+)\s+contributions?\s/);
-  const total = totalText ? Number(totalText[1].replaceAll(",", "")) : NaN;
-  if (!Number.isSafeInteger(total) || total !== days.reduce((sum, day) => sum + day.count, 0)) {
-    throw new Error("Contribution total does not match daily counts");
+  // GitHub's headline and cells can update separately; total the displayed dates.
+  const total = days.reduce((sum, day) => sum + day.count, 0);
+  if (!Number.isSafeInteger(total)) {
+    throw new Error("Invalid contribution total");
   }
   return { days, total };
 }
